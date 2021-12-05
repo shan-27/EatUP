@@ -1,0 +1,25 @@
+﻿<Window x:Class="EatUP.STUP_Win"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EatUP"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="STUP_Win" Height="600" Width="1024" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Background="{x:Null}" >
+    <Grid Background="{x:Null}">
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect fadeIN, Duration=0:0:0.8}">
+            <Grid Background="Black">
+            <Image HorizontalAlignment="Left" Height="600" VerticalAlignment="Top" Width="1024" Source="Assets/Startup1.jpg" Opacity="0.5" />
+            <TextBlock Text="Welcome to" FontFamily="Ubuntu" FontSize="30" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" Margin="0 120 0 200 "></TextBlock>
+            <TextBlock Text="Eat" FontFamily="Ubuntu" FontSize="70" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" Margin="404,170,508,200"></TextBlock>
+            <TextBlock Text="UP." FontFamily="Ubuntu" FontSize="70" FontWeight="Bold" Foreground="Crimson" HorizontalAlignment="Center" Margin="516,170,404,200"></TextBlock>
+            <TextBlock Text="For your taste" FontFamily="Ubuntu" FontSize="30" Foreground="White" HorizontalAlignment="Center" Margin="0 250 0 200 "/>
+            <TextBlock Text="Happy to welcome you" FontFamily="Ubuntu" FontSize="20"  Foreground="White" HorizontalAlignment="Center" Margin="0 310 0 200 "></TextBlock>
+            <TextBlock Text="Hope you have the best service!" FontFamily="Ubuntu" FontSize="20"  Foreground="White" HorizontalAlignment="Center" Margin="0 335 0 0 "></TextBlock>
+            <TextBlock Text="Thanks in advance for picking out our service" FontFamily="Ubuntu" FontSize="20"  Foreground="White" HorizontalAlignment="Center" Margin="0 360 0 200 "></TextBlock>
+            <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Content="Next" FontFamily="ubuntu" Margin="0 0 0 120" FontSize="18" Background="Crimson" BorderBrush="Crimson" FontWeight="Bold" Click="StUPNext_Click" />
+        </Grid>
+        </materialDesign:TransitioningContent>
+    </Grid>
+</Window>

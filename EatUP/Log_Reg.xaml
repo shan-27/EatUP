@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="EatUP.Log_Reg"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EatUP"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="510" d:DesignWidth="774" >
+
+    <Grid>
+        <materialDesign:TransitioningContent >
+            <Grid>
+                <Image  Stretch="UniformToFill" Margin="0,0,0.4,0.4" Source="Assets/Store.jpg"/>
+                <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.8}">
+                    <Grid>
+
+                        <Rectangle Fill="#FF2C2C2C" HorizontalAlignment="Center" Height="360" VerticalAlignment="Center" Width="700"  />
+                        <Rectangle x:Name="rectangle" Fill="Crimson" HorizontalAlignment="Center" Height="360" VerticalAlignment="Center" Width="290"  Margin="410,0,0,0" RenderTransformOrigin="0.5,0.5">
+
+                        </Rectangle>
+
+                        <Grid x:Name="login" Margin="26,134,125.4,16.4">
+                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" FontFamily="Ubuntu" FontSize="24" FontWeight="Bold" Width="350" TextAlignment="Center" Foreground="White" Margin="40,0,0,0"/>
+                            <TextBox x:Name="text_Login_username" HorizontalAlignment="Left" Height="33" Margin="128,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="247" Background="#FFDFDFDF" FontFamily="Ubuntu" VerticalContentAlignment="Center" Foreground="#FF313131" Padding="5,0,0,0"/>
+                            <Button x:Name="btn_login" Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Width="92" Margin="170,183,0,0" Height="27" Background="Crimson" BorderBrush="#FF8C0823" FontFamily="Ubuntu" HorizontalContentAlignment="Center" Click="btn_login_Click" Padding="16,0,16,1" VerticalContentAlignment="Center"/>
+                            <PasswordBox x:Name="text_Login_password" HorizontalAlignment="Left" Height="33" Margin="128,118,0,0"  VerticalAlignment="Top" Width="247" Background="#FFDFDFDF" FontFamily="Ubuntu" VerticalContentAlignment="Center" Foreground="#FF313131" ToolTip="Password" Padding="5,0,0,0"   />
+                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" FontFamily="Ubuntu" Width="154" TextAlignment="Center" Foreground="White" Margin="-6,76,0,0" Height="16"/>
+                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" FontFamily="Ubuntu" Width="154" TextAlignment="Center" Foreground="White" Margin="-6,127,0,0" Height="16"/>
+
+                        </Grid>
+                        <Grid x:Name="Signup" Margin="444,134,-31,4">
+                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Sign Up?" VerticalAlignment="Top" FontFamily="Ubuntu" FontSize="24" FontWeight="Bold" Width="287" TextAlignment="Center" Foreground="White"/>
+                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Still don't have an account?" VerticalAlignment="Top" Margin="0,46,0,0" FontFamily="Ubuntu" Width="287" TextAlignment="Center" Foreground="White" FontSize="14"/>
+                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Click signup and make a account today to get offers as a new user. For more details about offers and promos as new customer please visit to our social media!!" VerticalAlignment="Top" Margin="50,89,0,0" FontFamily="Ubuntu" Width="198" TextAlignment="Center" Foreground="White" Height="77"/>
+                            <Button x:Name="btn_signup" Content="Sign Up" HorizontalAlignment="Left" VerticalAlignment="Top" Width="92" Margin="102,183,0,0" Height="27" Background="#FF2C2C2C" BorderBrush="#FF2F2F2F" FontFamily="Ubuntu" HorizontalContentAlignment="Center" Click="btn_signup_Click" Padding="16,0,16,1" Grid.IsSharedSizeScope="True" VerticalContentAlignment="Center"/>
+
+                        </Grid>
+
+
+                    </Grid>
+                </materialDesign:TransitioningContent>
+            </Grid>
+            
+
+        </materialDesign:TransitioningContent>
+
+
+    </Grid>
+</UserControl>

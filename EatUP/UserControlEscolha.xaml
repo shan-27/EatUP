@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="EatUP.UserControlEscolha"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EatUP"
+             mc:Ignorable="d" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             Height="auto" Width="auto">
+    <Grid>
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.8}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0" Height="300" Background="#FFF3F3F3" Margin="10">
+                    <Grid.Effect>
+                        <DropShadowEffect BlurRadius="20" Color="#FFDEDEDE" ShadowDepth="1"/>
+                    </Grid.Effect>
+
+                    <StackPanel Width="200">
+                        <TextBlock Margin="10" FontFamily="Ubuntu" FontSize="18" Text="Product Name" Foreground="#FFC00000" FontWeight="Bold"/>
+                        <Image Source="Assets/pizzabar.jpg" Width="200" Height="150" Stretch="UniformToFill" />
+                        <TextBlock FontSize="8" Margin="8" TextWrapping="Wrap" FontFamily="Champagne &amp; Limousines" Height="40">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae est vel turpis hendrerit vulputate. In eleifend, nunc eu egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. adipiscing elit
+                        </TextBlock>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5,0" Width="190">
+                            <TextBlock Text="Rs" VerticalAlignment="Center" Margin="1" FontSize="20" FontFamily="Champagne &amp; Limousines"/>
+                            <TextBlock Text="25" VerticalAlignment="Center" Margin="5" FontSize="20" FontFamily="Champagne &amp; Limousines" Width="64"/>
+                            <Button Width="95" FontFamily="Ubuntu" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFC00000" Padding="10,4" >Shop Now</Button>
+                            <Rectangle  Fill="#FFC00000" HorizontalAlignment="Right" VerticalAlignment="Center" Width="90" Height="28" RadiusX="4" RadiusY="4" ></Rectangle>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+
+            </Grid>
+        </materialDesign:TransitioningContent>
+    </Grid>
+</UserControl>

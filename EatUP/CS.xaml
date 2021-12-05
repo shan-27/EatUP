@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="EatUP.CS"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EatUP"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="510" d:DesignWidth="774">
+    <Grid>
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect fadeIN, Duration=0:0:0.8}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="254*"/>
+                    <ColumnDefinition Width="133*"/>
+                </Grid.ColumnDefinitions>
+                <Image  Stretch="UniformToFill" Margin="0,0,0.4,0.4" Source="Assets/Store.jpg" Grid.ColumnSpan="2"/>
+                <Label HorizontalAlignment="Left" Margin="48,64,0,0" VerticalAlignment="Top" Height="38" Width="75">
+                    <Label Content="Name" FontFamily="Ubuntu" FontSize="18" Height="29" Width="65" Foreground="#FF222222"/>
+                </Label>
+                <TextBox x:Name="text_CS_Name" HorizontalAlignment="Left" Height="36" Margin="179,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="265" Background="White" BorderBrush="#FFDDDDDD" BorderThickness="2"  Foreground="#FF222222" FontFamily="Ubuntu" FontSize="14" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch" Padding="10,0" SelectionBrush="Crimson" CaretBrush="Crimson" />
+                <Label HorizontalAlignment="Left" Margin="48,121,0,0" VerticalAlignment="Top" Height="38" Width="75">
+                    <Label Content="E-mail" FontFamily="Ubuntu" FontSize="18" Height="29" Width="65" Foreground="#FF222222"/>
+                </Label>
+                <TextBox x:Name="text_CS_Email" HorizontalAlignment="Left" Height="36" Margin="179,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="265" Background="White" BorderBrush="#FFDDDDDD" BorderThickness="2"  Foreground="#FF222222" FontFamily="Ubuntu" FontSize="14" VerticalContentAlignment="Center" Padding="10,0" SelectionBrush="Crimson" CaretBrush="Crimson" />
+                <Label HorizontalAlignment="Left" Margin="48,180,0,0" VerticalAlignment="Top" Height="46" Width="82">
+                    <Label Content="Subject" FontFamily="Ubuntu" FontSize="18" Height="37" Width="72" Foreground="#FF222222"/>
+                </Label>
+                <TextBox x:Name="text_CS_Subject" HorizontalAlignment="Left" Height="36" Margin="179,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="265" Background="White" BorderBrush="#FFDDDDDD" BorderThickness="2"  Foreground="#FF222222" VerticalContentAlignment="Center" Padding="10,0" FontFamily="Ubuntu" FontSize="14" SelectionBrush="Crimson" CaretBrush="Crimson" MaxLength="50"/>
+                <Label HorizontalAlignment="Left" Margin="48,239,0,0" VerticalAlignment="Top" Height="54" Width="99">
+                    <Label Content="Message" FontFamily="Ubuntu" FontSize="18" Height="45" Width="89" Foreground="#FF222222"/>
+                </Label>
+                <TextBox x:Name="text_CS_Message" HorizontalAlignment="Left" Height="126" Margin="179,239,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="265" Background="White" BorderBrush="#FFDDDDDD" BorderThickness="2"  Foreground="#FF222222" FontFamily="Ubuntu" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Padding="5" SelectionBrush="Crimson" CaretBrush="Crimson" MaxLength=" 500"/>
+                <Button x:Name="btn_CS_send" Content="Send" HorizontalAlignment="Left" Margin="344,392,0,0" VerticalAlignment="Top" Width="100" Height="39" FontFamily="Ubuntu" FontSize="16" Background="Crimson" BorderBrush="#FFBA0E31" Click="btn_CS_send_Click"/>
+                <TextBlock HorizontalAlignment="Left" Margin="0,135,0,0" TextWrapping="Wrap" Text="Get in Touch" VerticalAlignment="Top" FontFamily="Ubuntu" FontWeight="Bold" Height="25" Width="134" FontSize="22" Grid.Column="1" Foreground="#FF222222"/>
+                <TextBlock HorizontalAlignment="Left" Margin="0,179,0,0" TextWrapping="Wrap" Text="Feel free to send a message to us about your thoughts, compliments and questions! We are dedicated to send a reply as soon as possible" VerticalAlignment="Top" FontFamily="Ubuntu" Height="117" Width="224" Grid.Column="1" FontSize="16" Foreground="#FF222222"/>
+
+            </Grid>
+        </materialDesign:TransitioningContent>
+    </Grid>
+</UserControl>

@@ -1,0 +1,20 @@
+﻿<Window x:Class="EatUP.Admin_Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EatUP"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d" Height="330.602" Width="437.043" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" >
+    <Grid Background="#FF2C2C2C" Margin="0,0,-0.2,0.2">
+        <Grid x:Name="login" Margin="0,50,0,50" Background="#FF2C2C2C">
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Admin login" VerticalAlignment="Top" FontFamily="Ubuntu" FontSize="24" FontWeight="Bold" Width="350" TextAlignment="Center" Foreground="White"/>
+            <TextBox x:Name="text_AdminLogin_username" HorizontalAlignment="Left" Height="33" Margin="128,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="247" Background="#FFDFDFDF" FontFamily="Ubuntu" VerticalContentAlignment="Center" Foreground="#FF292929" SelectionBrush="Crimson" CaretBrush="Crimson" HorizontalContentAlignment="Left" Padding="10,0,0,0" ScrollViewer.CanContentScroll="True"/>
+            <PasswordBox x:Name="text_AdminLogin_password" HorizontalAlignment="Left" Height="33" Margin="128,118,0,0"  VerticalAlignment="Top" Width="247" Background="#FFDFDFDF" FontFamily="Ubuntu" VerticalContentAlignment="Center" Foreground="#FF292929" SelectionBrush="Crimson" CaretBrush="Crimson" HorizontalContentAlignment="Left" Padding="10,0,0,0" ToolTip="Password"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" FontFamily="Ubuntu" Width="154" TextAlignment="Center" Foreground="White" Margin="-6,76,0,0" Height="16"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" FontFamily="Ubuntu" Width="154" TextAlignment="Center" Foreground="White" Margin="-6,127,0,0" Height="16"/>
+            <Button x:Name="btn_AdminLogin" Content="Login" HorizontalAlignment="Left" Margin="182,188,0,0" VerticalAlignment="Top" Width="75" FontFamily="Ubuntu" Background="Crimson" BorderBrush="#FFAB0C2C" Click="btn_AdminLogin_Click"/>
+        </Grid>
+        <Button x:Name="btnAdmin_Login_Close" Content="X" Margin="397,0,0,0" VerticalAlignment="Top" FontFamily="Ubuntu" Height="18" Padding="0" Click="btnAdmin_Login_Close_Click" Background="Crimson" BorderBrush="#FFBF1033"/>
+    </Grid>
+</Window>

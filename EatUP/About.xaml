@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="EatUP.About"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EatUP"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="510" d:DesignWidth="774">
+    <Grid>
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect fadeIN, Duration=0:0:0.8}">
+            <Grid>
+                <Image  Stretch="UniformToFill" Margin="0,0,0.4,0.4" Source="Assets/Store.jpg"/>
+                <TextBlock HorizontalAlignment="Left" Margin="96,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="590" Height="166" FontFamily="Ubuntu" TextAlignment="Center" FontSize="14"><Run Text="HUNGRY?! Good, we are here to serve you. Everything we do is about you. From chefs who create exciting new flavors, to crew members who know exactly how you want your meal we prioritize what you need to get you on your way. We believe that using the freshest ingredients produces the best results. We are tireless in staying abreast of the latest food trends. And we are obsessed with creating customized menus and culinary masterpieces for our clients. Simply we are existed to make your vision a reality. "/><LineBreak/><Run/><LineBreak/><Run FontWeight="SemiBold" FontSize="18" Text="We strive to keep you at your best, and we remain loyal"/><LineBreak/><Run FontWeight="SemiBold" FontSize="18" Text="to you, your tastes, and your time."/></TextBlock>
+                <StackPanel Margin="83,283,10.4,94.4" Orientation="Horizontal" HorizontalAlignment="Center" Width="681">
+                    <StackPanel Height="75"  Orientation="Horizontal" Margin="20,0">
+                        <materialDesign:PackIcon Kind="EmailOutline"  Width="48" Height="30" VerticalAlignment="Center" />
+                        <TextBlock Text="contact.EatUP@gmail.com" FontSize="14" VerticalAlignment="Center" FontWeight="SemiBold" />
+
+                    </StackPanel>
+                    <StackPanel Height="75"  Orientation="Horizontal" Margin="20,0">
+                        <materialDesign:PackIcon Kind="Phone"  Width="48" Height="30" VerticalAlignment="Center" />
+                        <TextBlock Text="+94 81234567" FontSize="14" VerticalAlignment="Center" FontWeight="SemiBold" />
+
+                    </StackPanel>
+                    <Grid Height="75" Margin="20,29" Width="170"  >
+                        <materialDesign:PackIcon Kind="Web"  Width="48" Height="30"  HorizontalAlignment="Center" Margin="0,22,122,0"  />
+                        <TextBlock Text="www.eatup.ml" FontSize="14" VerticalAlignment="Center" FontWeight="SemiBold" Margin="48,28,0,28" />
+                        <Button x:Name="web_button" BorderBrush="{x:Null}" Background="{x:Null}" Margin="48,34,33,28" Height="Auto" Click="web_button_Click" ></Button>
+
+                    </Grid>
+
+                </StackPanel>
+
+            </Grid>
+        </materialDesign:TransitioningContent>
+    </Grid>
+</UserControl>

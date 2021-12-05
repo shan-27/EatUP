@@ -1,0 +1,535 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F2571E19-BB3A-46FA-B1A1-15ECD9392887}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EatUP</RootNamespace>
+    <AssemblyName>EatUP</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.1.2\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.3.1.953, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.2.3.1.953\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Login.xaml.cs">
+      <DependentUpon>Admin_Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Pannel.xaml.cs">
+      <DependentUpon>Admin_Pannel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Bev_and_Desserts.xaml.cs">
+      <DependentUpon>Bev_and_Desserts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Blank.xaml.cs">
+      <DependentUpon>Blank.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Cart.xaml.cs">
+      <DependentUpon>Cart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Cart_Empty.xaml.cs">
+      <DependentUpon>Cart_Empty.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Cart_Error.xaml.cs">
+      <DependentUpon>Cart_Error.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CS.xaml.cs">
+      <DependentUpon>CS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Database\EatUPContext.cs" />
+    <Compile Include="Log_Reg.xaml.cs">
+      <DependentUpon>Log_Reg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Main Meals.xaml.cs">
+      <DependentUpon>Main Meals.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105151300516_InitialCreate.cs" />
+    <Compile Include="Migrations\202105151300516_InitialCreate.designer.cs">
+      <DependentUpon>202105151300516_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105151301579_customer.cs" />
+    <Compile Include="Migrations\202105151301579_customer.designer.cs">
+      <DependentUpon>202105151301579_customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105151310400_admin.cs" />
+    <Compile Include="Migrations\202105151310400_admin.designer.cs">
+      <DependentUpon>202105151310400_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105151354426_changekey.cs" />
+    <Compile Include="Migrations\202105151354426_changekey.designer.cs">
+      <DependentUpon>202105151354426_changekey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105151748058_fooditem.cs" />
+    <Compile Include="Migrations\202105151748058_fooditem.designer.cs">
+      <DependentUpon>202105151748058_fooditem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105151752208_fooditem1.cs" />
+    <Compile Include="Migrations\202105151752208_fooditem1.designer.cs">
+      <DependentUpon>202105151752208_fooditem1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105160850457_int_to_float.cs" />
+    <Compile Include="Migrations\202105160850457_int_to_float.designer.cs">
+      <DependentUpon>202105160850457_int_to_float.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105161007291_newfooditem.cs" />
+    <Compile Include="Migrations\202105161007291_newfooditem.designer.cs">
+      <DependentUpon>202105161007291_newfooditem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105161021588_newfloat.cs" />
+    <Compile Include="Migrations\202105161021588_newfloat.designer.cs">
+      <DependentUpon>202105161021588_newfloat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105161038135_1.cs" />
+    <Compile Include="Migrations\202105161038135_1.designer.cs">
+      <DependentUpon>202105161038135_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105161041269_2.cs" />
+    <Compile Include="Migrations\202105161041269_2.designer.cs">
+      <DependentUpon>202105161041269_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105161046178_status.cs" />
+    <Compile Include="Migrations\202105161046178_status.designer.cs">
+      <DependentUpon>202105161046178_status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105161114385_float2.cs" />
+    <Compile Include="Migrations\202105161114385_float2.designer.cs">
+      <DependentUpon>202105161114385_float2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106091727572_imageBYTE.cs" />
+    <Compile Include="Migrations\202106091727572_imageBYTE.designer.cs">
+      <DependentUpon>202106091727572_imageBYTE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106091737358_imageBYTEtostring.cs" />
+    <Compile Include="Migrations\202106091737358_imageBYTEtostring.designer.cs">
+      <DependentUpon>202106091737358_imageBYTEtostring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106101413401_newbyteattribute.cs" />
+    <Compile Include="Migrations\202106101413401_newbyteattribute.designer.cs">
+      <DependentUpon>202106101413401_newbyteattribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107131323132_new.cs" />
+    <Compile Include="Migrations\202107131323132_new.designer.cs">
+      <DependentUpon>202107131323132_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107151512371_orderlist.cs" />
+    <Compile Include="Migrations\202107151512371_orderlist.designer.cs">
+      <DependentUpon>202107151512371_orderlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107241058327_ordertableupdate1.cs" />
+    <Compile Include="Migrations\202107241058327_ordertableupdate1.designer.cs">
+      <DependentUpon>202107241058327_ordertableupdate1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107241116117_newtableOrderDetails.cs" />
+    <Compile Include="Migrations\202107241116117_newtableOrderDetails.designer.cs">
+      <DependentUpon>202107241116117_newtableOrderDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107241125300_relationordertomaindetails.cs" />
+    <Compile Include="Migrations\202107241125300_relationordertomaindetails.designer.cs">
+      <DependentUpon>202107241125300_relationordertomaindetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107241141543_changetodetailsid.cs" />
+    <Compile Include="Migrations\202107241141543_changetodetailsid.designer.cs">
+      <DependentUpon>202107241141543_changetodetailsid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107241150596_addtotalbill.cs" />
+    <Compile Include="Migrations\202107241150596_addtotalbill.designer.cs">
+      <DependentUpon>202107241150596_addtotalbill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107271239057_L1.cs" />
+    <Compile Include="Migrations\202107271239057_L1.designer.cs">
+      <DependentUpon>202107271239057_L1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107271247321_L2.cs" />
+    <Compile Include="Migrations\202107271247321_L2.designer.cs">
+      <DependentUpon>202107271247321_L2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109240914419_safe.cs" />
+    <Compile Include="Migrations\202109240914419_safe.designer.cs">
+      <DependentUpon>202109240914419_safe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109241007511_CS.cs" />
+    <Compile Include="Migrations\202109241007511_CS.designer.cs">
+      <DependentUpon>202109241007511_CS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111260815180_finalbefore.cs" />
+    <Compile Include="Migrations\202111260815180_finalbefore.designer.cs">
+      <DependentUpon>202111260815180_finalbefore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111260817058_addcolum_for_CSform.cs" />
+    <Compile Include="Migrations\202111260817058_addcolum_for_CSform.designer.cs">
+      <DependentUpon>202111260817058_addcolum_for_CSform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\Cart_model.cs" />
+    <Compile Include="Models\CS_form.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Food_Item.cs" />
+    <Compile Include="Models\Main_Order_Details.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Profile.xaml.cs">
+      <DependentUpon>Profile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Qty.xaml.cs">
+      <DependentUpon>Qty.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reg.xaml.cs">
+      <DependentUpon>Reg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Soups_and_Salads.xaml.cs">
+      <DependentUpon>Soups_and_Salads.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Store.xaml.cs">
+      <DependentUpon>Store.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="STUP_Win.xaml.cs">
+      <DependentUpon>STUP_Win.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="test.xaml.cs">
+      <DependentUpon>test.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEscolha.xaml.cs">
+      <DependentUpon>UserControlEscolha.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlInicio.xaml.cs">
+      <DependentUpon>UserControlInicio.xaml</DependentUpon>
+    </Compile>
+    <Page Include="About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin_Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin_Pannel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Bev_and_Desserts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Blank.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cart_Empty.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cart_Error.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Log_Reg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Main Meals.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Profile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Qty.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Soups_and_Salads.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Store.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="STUP_Win.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="test.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlEscolha.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlInicio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Migrations\202105151300516_InitialCreate.resx">
+      <DependentUpon>202105151300516_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105151301579_customer.resx">
+      <DependentUpon>202105151301579_customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105151310400_admin.resx">
+      <DependentUpon>202105151310400_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105151354426_changekey.resx">
+      <DependentUpon>202105151354426_changekey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105151748058_fooditem.resx">
+      <DependentUpon>202105151748058_fooditem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105151752208_fooditem1.resx">
+      <DependentUpon>202105151752208_fooditem1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105160850457_int_to_float.resx">
+      <DependentUpon>202105160850457_int_to_float.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105161007291_newfooditem.resx">
+      <DependentUpon>202105161007291_newfooditem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105161021588_newfloat.resx">
+      <DependentUpon>202105161021588_newfloat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105161038135_1.resx">
+      <DependentUpon>202105161038135_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105161041269_2.resx">
+      <DependentUpon>202105161041269_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105161046178_status.resx">
+      <DependentUpon>202105161046178_status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105161114385_float2.resx">
+      <DependentUpon>202105161114385_float2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106091727572_imageBYTE.resx">
+      <DependentUpon>202106091727572_imageBYTE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106091737358_imageBYTEtostring.resx">
+      <DependentUpon>202106091737358_imageBYTEtostring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106101413401_newbyteattribute.resx">
+      <DependentUpon>202106101413401_newbyteattribute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107131323132_new.resx">
+      <DependentUpon>202107131323132_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107151512371_orderlist.resx">
+      <DependentUpon>202107151512371_orderlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107241058327_ordertableupdate1.resx">
+      <DependentUpon>202107241058327_ordertableupdate1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107241116117_newtableOrderDetails.resx">
+      <DependentUpon>202107241116117_newtableOrderDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107241125300_relationordertomaindetails.resx">
+      <DependentUpon>202107241125300_relationordertomaindetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107241141543_changetodetailsid.resx">
+      <DependentUpon>202107241141543_changetodetailsid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107241150596_addtotalbill.resx">
+      <DependentUpon>202107241150596_addtotalbill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107271239057_L1.resx">
+      <DependentUpon>202107271239057_L1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107271247321_L2.resx">
+      <DependentUpon>202107271247321_L2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109240914419_safe.resx">
+      <DependentUpon>202109240914419_safe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109241007511_CS.resx">
+      <DependentUpon>202109241007511_CS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111260815180_finalbefore.resx">
+      <DependentUpon>202111260815180_finalbefore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111260817058_addcolum_for_CSform.resx">
+      <DependentUpon>202111260817058_addcolum_for_CSform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\EatUP.Models.Food_Item.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\09-calabrese-tradizionale.jpg" />
+    <Resource Include="Assets\Pizza-doce-de-Brigadeiro.jpg" />
+    <Resource Include="Assets\pizzabar.jpg" />
+    <Resource Include="Assets\size_960_16_9_pizza2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Startup1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="09-calabrese-tradizionale.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Store.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\hamburger-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Store.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UI\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="eatup.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icon2.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
